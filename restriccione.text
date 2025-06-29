@@ -5,3 +5,6 @@ de preferencia cada boton con su icono
 desplegar entre interfaces ventana de confirmacion, de realizacion con éxito del proceso
 todos los formularios deben mostrar su titulo
 en todos los casos (tabla cliente, producto, venta, etc) el id no es editable
+validar datos en imputs, todas las validaciones logicas posible	
+	no debe receptar -0, no vacio, no numeros negativos, donde se esperan valores numericos no permitir letras, no caracteres especiales
+	el peso no puede ser negativo,
