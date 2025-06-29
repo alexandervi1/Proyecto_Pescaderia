@@ -1,0 +1,14 @@
+el cliente puede ingresar a sistema visualizar productos y visitar ayuda sin necesidad de estar registrado
+cuando el cliente da clik en un producto es redirigido a la pag de especificaciones del producto, (todavia no se ha registrado)
+cuando el cliente presiona en agregar al carrito se dispara la opcion de registrarse o loguearse, tambien puede loguearse desde la primera instancia del sistema, en el nav
+de preferencia cada boton con su icono
+desplegar entre interfaces ventana de confirmacion, de realizacion con éxito del proceso
+todos los formularios deben mostrar su titulo
+en todos los casos (tabla cliente, producto, venta, etc) el id no es editable
+validar datos en imputs, todas las validaciones logicas posible	
+	no debe receptar -0, no vacio, no numeros negativos, donde se esperan valores numericos no permitir letras, no caracteres especiales
+	el peso no puede ser negativo,
+todo formulario o pagina de ingreso de datos de us tiene opcion de confirmacion o cancelacion antes de genearse definitivamente y almacenarse en el sistema
+implementar controles de validcion de datos en los campos de ingreso de datos por us
+usaremos una sola guia de estilos y por tanto una sola codificacion css correspondientes, que tenga preimplementados dichos estilos
+

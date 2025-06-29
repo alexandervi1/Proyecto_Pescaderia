@@ -1,0 +1,125 @@
+METODOLOGIA								
+SCRUM								
+PRODUCT OWNER								
+	OMAR							
+		REPONSABLE DE MAXIMIZAR VALOR DEL PRODUCTO						
+		DEFINE Y PRIORIZA ELEMENTOS DE PRODUCTO						
+		PLANIFICA 						
+		Representa a los clientes y usuarios, definiendo el producto y priorizando el Product Backlog.						
+		Visión del producto: Define la visión general del producto y establece las prioridades.						
+		Product Backlog: lista ordenada de todas las características y funcionalidades que el producto debe tene						
+		Maximización del valor: Toma decisiones que maximizan el valor del producto para el cliente.						
+SCRUM MASTER								
+	ALEXANDER							
+		LIDERA EL EQUIPO DE DESARROLLO						
+		FACILIATDOR DEL PROCES Y GUIA						
+		ASEGURA QUE SE SIGA						
+		Facilitador: Facilita las reuniones de Scrum (Daily Scrum, Sprint Planning, Sprint Review y Retrospective).						
+		 Entrenador: Enseña a los miembros del equipo las prácticas de Scrum y ayuda a resolver impedimentos.X						
+		 Entrenador: Enseña a los miembros del equipo las prácticas de Scrum y ayuda a resolver impedimentos. 						
+		Servidor: Sirve al equipo y a la organización para eliminar obstáculos y fomentar un ambiente de colaboración.						
+EQUIPO DE DESARROLLO								
+	DANIEL QUIGURI							
+	JHONATHAN GUANULEMA							
+		CONSTRUYE EL PRODUCO						
+		Autoorganizado: Se organiza de forma autónoma para completar el trabajo del sprint.						
+		Multifuncional: Posee las habilidades necesarias para completar todas las tareas del sprint.						
+		Compromiso: Se compromete a alcanzar los objetivos del sprint.						
+ETAPAS								
+	PLANIFICACION							
+		Definición del producto:						
+			visión clara del producto final					
+			que	aplicacion web 				
+				que ofrece funcionalidades admistrativas orientadas a una mejor gestion del inventario 				
+				y a la informcacion proveida en un catalogo de productos para el usuario final				
+			para quien					
+				clientes al minoreo, y por mayor, restorantes				
+			como					
+				mediante la definicion y priorizacion de requerimientos por parte del administrador de la Pescaderia Don Walter				
+				el desarrollo de funcionalidades alineadas con estos				
+				y la integracion e interrelacion de datos entre el sistema de administracion y el catalogo				
+			para que	para un manejo eficiente de la informacion por parte del adminitrador 				
+				gestion de compras por parte del cliente consumidor en tiempo real				
+			Product Backlog					
+				características Administrativa				
+						viualizacion y navegabilidad		
+							mostrado claro y pertinente de la informacion	
+							agil y eficiente, clara y descriptiva navegabilidad (iconos minimalitas, graficos monocromaticos) 	
+							no se usan colores fuertes, ni diseno exesivamente llamativo, son formularios con 	
+								diseno sobrio, algun ligero aspecto de la marca, o formas de la tipologia
+								consistencia en tipografias definidas, tamanos y colores de letra
+								seguir guia de estilo
+						Informacion		
+							se prioriza que la informacion sea legible, entendible, util por encima del diseno	
+							la informacion mostrada, es decir, los datos directos, calculados o extraidos deberan orientarse a ser recurso para la toma de desiones por parte de los usuarios	
+				funcionalidades Administrativa				
+					control de cantidades disponibles de cada producto			
+						productos que deben reabastecerce		
+				caracteristicas Catalogo				
+					Mostrado de informacion al clientes consuidores registrados			
+					Mostrado de informacion al clientes visitantes			
+				funcionalidades Catalogo				
+					registro, autenticacion			
+					busqueda y visaulizacion de productos por lista de registro y por pg de especificaciones ficha tecnica			
+					Realizacion de una recerva o compra			
+	SPRING PLANING							
+		Defininicon general del sistema a implmentar (Caracteristicas y fuccionaidades, modelado basico)						
+		diseno e implementacion de BD						
+			tablas y relaciones, realizar y validar propuesta del diseno con product master, prduct owner y equipo de desarrollo)					
+		diseno Guia de estilo						
+			especificacion grafica: determinacion de clores(rojo: fuerza, azul, negro), marca, slogan, tipologia, tipografia,tamanos colores  de titulos y subtitulos, datos					
+			prototipado bocetage en crudo de paginas con sus tamanos estandar para campos de estrada, datos a mostrarse, titulo, descripciones, blokes, diagramacion, 					
+		diseno de PAGINAS del sistema 						
+			diseno grafico funcional 					
+				Paginas del sistema ADM, 				
+				Pagina del cliente				
+			diseno de navegabilidad					
+				mostrada en bocetos de las Pg, formularios, reportes, en papel				
+				para administrador				
+				para cliente consumidor				
+	DESARROLLO							
+		IMPLEMENTACIONES						
+			Implementacion de Paginas css, html					
+			impementacion de operaciones logicas js, php: de ingreso, transmicion, procesamiento y recuperacion de datos					
+				funcionalidad de botones				
+				codificacion de reportes				
+				implementacion de 				
+	RETROSPECTIVA Y PRUEBAS							
+		resolver discutir y decidir 						
+		PRUEBAS DE FUNCIONALIDAD 						
+		ingreso de datos						
+		depuracion de imagen y aspectos visuales de las pg						
+		revicion de controles y prubas de usuario						
+		revisicon y validacion de funcionalidades						
+instrucciones Generales								
+	todo formulario o pagina de ingreso de datos de us tiene opcion de confirmacion o cancelacion antes de genearse definitivamente y almacenarse en el sistema							
+	implementar controles de validcion de datos en los campos de ingreso de datos por us							
+	usaremos una sola guia de estilos y por tanto una sola codificacion css correspondientes, que tenga preimplementados dichos estilos							
+TAREAS ADICIONALES								
+	DOCUMENTO INFORME: 							
+		Introduccion						
+		Objetivos 						
+			General					
+			Especif					
+				citar funcionalidades, roles				
+		Procedimiento						
+			Problema					
+			Justif					
+		Metodologia						
+			Redactar Met Scrum y justificar como se uso en nuestro trabajo					
+			Analisis de datos: 					
+				como se obtubieron				
+				tras el analisis como se priorizaron datos y funciones a usar				
+			seguir esquema dado por profesor					
+				redactar lo ocurrido en fase de Analisis				
+				poner Mockups				
+				per DER BD, y escript de creacion				
+				Poner Codigos HTML, CSS, JS, PHP				
+			Ayudas del sistema					
+				redactar los mecanismos de ayuda utilizados				
+					texto sujerente en campos, ventanas de informacion hovver			
+					controles de datos ingresdos			
+					ayudas en navegabilidad, iconos etc			
+		Resultados						
+			conclsiones					
+			Recommend					
