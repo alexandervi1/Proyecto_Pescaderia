@@ -1,0 +1,7 @@
+el cliente puede ingresar a sistema visualizar productos y visitar ayuda sin necesidad de estar registrado
+cuando el cliente da clik en un producto es redirigido a la pag de especificaciones del producto, (todavia no se ha registrado)
+cuando el cliente presiona en agregar al carrito se dispara la opcion de registrarse o loguearse, tambien puede loguearse desde la primera instancia del sistema, en el nav
+de preferencia cada boton con su icono
+desplegar entre interfaces ventana de confirmacion, de realizacion con éxito del proceso
+todos los formularios deben mostrar su titulo
+en todos los casos (tabla cliente, producto, venta, etc) el id no es editable
