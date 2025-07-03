@@ -1,0 +1,163 @@
+/* QUIENES SOMOS - DISEÑO PROFESIONAL */
+
+/* Clases base */
+.min-vh-50 { 
+    min-height: 50vh; 
+}
+
+/* Efectos hover */
+.hover-lift { 
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+}
+
+.hover-lift:hover { 
+    transform: translateY(-10px); 
+    box-shadow: 0 15px 35px rgba(0,0,0,0.15) !important; 
+}
+
+/* Gradientes */
+.bg-gradient-primary { 
+    background: linear-gradient(135deg, #0d6efd 0%, #198754 100%); 
+}
+
+/* Separadores decorativos */
+.section-divider { 
+    width: 60px; 
+    height: 4px; 
+    background: linear-gradient(90deg, #0d6efd, #198754); 
+}
+
+/* Texto con gradiente */
+.text-gradient { 
+    background: linear-gradient(135deg, #0d6efd, #198754); 
+    -webkit-background-clip: text; 
+    background-clip: text; 
+    -webkit-text-fill-color: transparent; 
+}
+
+/* Estilos específicos para secciones */
+.hero-overlay {
+    background: linear-gradient(135deg, rgba(13, 110, 253, 0.9), rgba(25, 135, 84, 0.8));
+}
+
+/* Cards de estadísticas */
+.stat-card h-100 {
+    transition: transform 0.3s ease;
+}
+
+.stat-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Puntos de misión */
+.mission-point {
+    transition: all 0.3s ease;
+}
+
+.mission-point:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+/* Objetivos de visión */
+.vision-goal {
+    transition: all 0.3s ease;
+}
+
+.vision-goal:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+/* Cards de valores */
+.valor-card {
+    transition: all 0.3s ease;
+}
+
+.valor-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+}
+
+/* Iconos animados */
+.section-icon {
+    transition: transform 0.3s ease;
+}
+
+.icon-container:hover .section-icon {
+    transform: scale(1.1);
+}
+
+/* Botones con efectos */
+.btn-outline-light {
+    transition: all 0.3s ease;
+}
+
+.btn-outline-light:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(255,255,255,0.3);
+}
+
+/* Animaciones de entrada */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate {
+    animation: fadeInUp 0.6s ease forwards;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .display-3 {
+        font-size: 2.5rem;
+    }
+    
+    .display-5 {
+        font-size: 2rem;
+    }
+    
+    .display-6 {
+        font-size: 1.75rem;
+    }
+    
+    .hero-overlay {
+        min-height: 60vh;
+    }
+}
+
+/* Mejoras para accesibilidad */
+.btn:focus,
+.valor-card:focus {
+    outline: 2px solid #0d6efd;
+    outline-offset: 2px;
+}
+
+/* Decoración de ondas */
+.wave-decoration ion-icon {
+    animation: wave 2s ease-in-out infinite;
+}
+
+.wave-decoration ion-icon:nth-child(2) {
+    animation-delay: 0.3s;
+}
+
+.wave-decoration ion-icon:nth-child(3) {
+    animation-delay: 0.6s;
+}
+
+@keyframes wave {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
