@@ -1,26 +1,26 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Comercial de Mariscos Don Walter</title>
+    <title>PESCADERÍA DON WALTER | QUIÉNES SOMOS</title>
     <!-- Bootstrap ICONS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Custom CSS -->
-    <link href="public/css/style.css" rel="stylesheet">
-
+    <link href="../public/css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="../public/css/quienessomos.css">
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </head>
-
 <body>
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg">
         <div class="container">
             <!-- Imagen como logo -->
-            <a class="navbar-brand" href="#">
-                <img src="public/img/Pescaderia Don Walter logo.png" alt="Logo Juguetería Marianita" width="200" height="64">
+            <a class="navbar-brand" href="../index.html">
+                <img src="../public/img/Pescaderia Don Walter logo.png" alt="Logo Pescadería Don Walter" width="200" height="64">
             </a>
 
             <!-- BUSQUEDA campo de entrada -->
@@ -29,7 +29,7 @@
                 id="search-form": Identificador único para manejarlo en JavaScript. 
                 -->
                 <!-- campo de búsqueda -->
-                <input class="form-control me-2" type="search" id="search-input">      
+                <!-- <input class="form-control me-2" type="search" id="search-input">       -->
                 <!--form-control: Estiliza el input con Bootstrap.
                 me-2: Margen derecho de 2 unidades para separar del botón. 
                 El usuario ingresa un término en el campo de búsqueda (#search-input).
@@ -39,134 +39,202 @@
                  id="search-input": Permite referenciar el input en scripts.
                  
                  --> 
-                <button class="btn btn-outline-light" type="submit">   
+                <!-- <button class="btn btn-outline-light" type="submit">    -->
                     <!-- Hace que el botón envíe el formulario. -->
-                    <i class="bi bi-search"></i>
+                    <!-- <i class="bi bi-search"></i> -->
                 </button>
-                <div id="search-suggestions" class="search-suggestions"></div>
+                <!-- <div id="search-suggestions" class="search-suggestions"></div> -->
             </form>
 
 
             <!-- Opciones antes de iniciar sesión -->
             <div id="guest-options">
         
-                <a href="./controller/usercontrolador.php?accion=quienes_somos" id="btn-quienes" class="btn btn-link text-light" style=" color: white;">¿Quiénes somos?</a>
-                <button class="btn btn-danger" id="open-login-modal">Iniciar Sesión</button>
-                <a href="#" class="btn btn-primary" id="open-register-modal">Registrarse</a>
-                <a href="./controller/usercontrolador.php?accion=ayuda" id="btn-ayuda" class="btn btn-link text-light" style="color: white;">
-                    <i class="bi bi-question-circle"></i> Ayuda
-                </a>
+                <a href="../index.html" class="btn btn-danger" id="open-login-modal">Página Principal</a>
+                
                 <!--<a href="#" class="btn btn-link text-light" id="open-admin-modal">Administrador</a>-->
             </div>
 
             <!-- Opciones después de iniciar sesión -->
-            <div id="user-options">
-                <!--<a href="#" class="d-flex align-items-center text-decoration-none" style="color: white;">
-                    <i class="bi bi-person-circle" style="font-size: 1.5rem; margin-right: 5px;"></i>
-                    <span id="user-name" class="user-info"></span>
-                </a>-->
-                <a href="view/carrito.php" aria-label="Carrito de compras"><i class="bi bi-cart"></i></a>
+            <!-- <div id="user-options">
+                <a href="#" class="d-flex align-items-center text-decoration-none" style="color: white;">
+                <i class="bi bi-person-circle" style="font-size: 1.5rem; margin-right: 5px;"></i>
+                    <span id="user-name" class="user-info"></span> -->
+                <!-- </a>--> 
+                <!-- <a href="../view/carrito.php" aria-label="Carrito de compras"><i class="bi bi-cart"></i></a> -->
                 <!--<i class="bi bi-cart3" style="font-size: 1.5rem;"></i>-->
                 <!--<a href="controller/logout.php" class="bi bi-box-arrow-right">Cerrar Sesión</a>-->
-                <a href="controller/logout.php" aria-label="Cerrar sesión" style="color: white;">
-                    <i class="bi bi-power" style="font-size: 2.0rem;"></i>
-                </a>
+                <!-- <a href="../controller/logout.php" aria-label="Cerrar sesión" style="color: white;"> -->
+                    <!-- <i class="bi bi-power" style="font-size: 2.0rem;"></i> -->
+                <!-- </a> --> 
             </div>
         </div>
     </nav>
 
-    <!-- Main Content -->
-    <div>
-        <!--PRODUCTOS PRINCIPALES (MÁS VENDIDOS)-->
-        <div class="container mt-4">
-            <div class="row">
-                <div class="col-12 text-center">
-                    <h2 class="mb-4">Nuestros Productos</h2>
+    <!-- HERO SECTION -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1>🌊 Del Mar a Tu Mesa 🐟</h1>
+                <p class="hero-subtitle">Más de 15 años llevando la frescura del océano directamente a tu hogar</p>
+                <div class="wave-decoration">
+                    <ion-icon name="water"></ion-icon>
+                    <ion-icon name="fish"></ion-icon>
+                    <ion-icon name="water"></ion-icon>
                 </div>
-                <!-- Placeholder for products -->
-                <div class="col-12">
-                    <div class="row" id="product-list">
-                        <!-- Add your products dynamically or statically here -->
-                        <div class="col-md-4">
-                            <div class="card mb-4">
-                                <img class="card-img-top" alt="Producto 1" data-producto-id="17">
-                                <div class="card-body" style="padding: 0;">
-                                    <h5 class="card-title" data-producto-id="17"></h5>
-                                    <!-- Nombre del producto -->
-                                    <p class="card-text" data-producto-id="17"></p>
-                                    <!-- Aquí se actualizará la descripción -->
-                                    <p class="product-price" data-producto-id="17"></p>
-                                    <!-- Aquí se actualizará el precio -->
-                                    <p class="product-discount" data-producto-id="17"></p>
-                                    <!-- Aquí se actualizará el descuento -->
-                                    <a href="view/producto.php?id=17" class="btn btn-primary">Comprar</a>
-                                </div>
-                            </div>
+            </div>
+            <div class="hero-image">
+                <img src="../public/img/Captura_de_pantalla_2025-06-26_170658-removebg-preview.png" alt="Logo Pescadería Don Walter" class="mascota">
+            </div>
+        </div>
+    </section>
 
+    <!-- PRESENTACIÓN -->
+    <section class="presentacion">
+        <div class="container">
+            <div class="intro-card">
+                <h2>🐙 Bienvenidos a Pescadería Don Walter</h2>
+                <p class="intro-text">
+                    Somos una empresa familiar que nació del amor por el mar y la pasión por ofrecer 
+                    productos marinos de la más alta calidad. En cada producto que vendemos, 
+                    llevamos el sabor auténtico del océano y el compromiso con la frescura que nos caracteriza.
+                </p>
+                <div class="stats">
+                    <div class="stat">
+                        <span class="stat-number">15+</span>
+                        <span class="stat-label">Años de experiencia</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">1000+</span>
+                        <span class="stat-label">Clientes satisfechos</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">100%</span>
+                        <span class="stat-label">Productos frescos</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MISIÓN -->
+    <section id="mision" class="mision">
+        <div class="container">
+            <div class="content-card">
+                <div class="icon-container">
+                    <ion-icon name="target" class="section-icon"></ion-icon>
+                </div>
+                <h2>🎯 Nuestra Misión</h2>
+                <p>
+                    Proveer productos marinos frescos, sostenibles y de excelente calidad, 
+                    manteniendo la tradición pesquera artesanal mientras adoptamos prácticas 
+                    responsables con el medio ambiente. Nos comprometemos a ser el puente 
+                    entre el océano y las familias ecuatorianas, garantizando que cada 
+                    producto llegue a su mesa con la frescura del primer día.
+                </p>
+                <div class="mission-points">
+                    <div class="point">
+                        <div class="point-icon">
+                            <ion-icon name="water"></ion-icon>
                         </div>
-                        <div class="col-md-4">
-                            <div class="card mb-4">
-                                <img class="card-img-top" alt="Producto 2" data-producto-id="18">
-                                <div class="card-body" style="padding: 0;">
-                                    <h5 class="card-title" data-producto-id="18"></h5>
-                                    <!-- Nombre del producto -->
-                                    <p class="card-text" data-producto-id="18"></p>
-                                    <!-- Aquí se actualizará la descripción -->
-                                    <p class="product-price" data-producto-id="18"></p>
-                                    <!-- Aquí se actualizará el precio -->
-                                    <p class="product-discount" data-producto-id="18"></p>
-                                    <!-- Aquí se actualizará el descuento -->
-                                    <a href="view/producto.php?id=18" class="btn btn-primary">Comprar</a>
-                                </div>
-                            </div>
+                        <div class="point-content">
+                            <h4>Frescura Diaria</h4>
+                            <span>Productos del mar seleccionados cada amanecer, garantizando máxima calidad</span>
                         </div>
-                        <div class="col-md-4">
-                            <div class="card mb-4">
-                                <img class="card-img-top" alt="Producto 3" data-producto-id="19">
-                                <div class="card-body" style="padding: 0;">
-                                    <h5 class="card-title" data-producto-id="19"></h5>
-                                    <!-- Nombre del producto -->
-                                    <p class="card-text" data-producto-id="19"></p>
-                                    <!-- Aquí se actualizará la descripción -->
-                                    <p class="product-price" data-producto-id="19"></p>
-                                    <!-- Aquí se actualizará el precio -->
-                                    <p class="product-discount" data-producto-id="19"></p>
-                                    <!-- Aquí se actualizará el descuento -->
-                                    <a href="view/producto.php?id=19" class="btn btn-primary">Comprar</a>
-                                </div>
-                            </div>
+                    </div>
+                    <div class="point">
+                        <div class="point-icon">
+                            <ion-icon name="leaf"></ion-icon>
+                        </div>
+                        <div class="point-content">
+                            <h4>Pesca Sostenible</h4>
+                            <span>Métodos responsables que protegen nuestros océanos para futuras generaciones</span>
+                        </div>
+                    </div>
+                    <div class="point">
+                        <div class="point-icon">
+                            <ion-icon name="people"></ion-icon>
+                        </div>
+                        <div class="point-content">
+                            <h4>Comunidad Local</h4>
+                            <span>Colaboración directa con pescadores artesanales de nuestra región</span>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+    </section>
 
-  
-
-        <!--CATEGORÍAS-->
-        <div class="container mt-4">
-            <div class="row">
-                <div class="col-12 text-center">
-                    <h2 class="mb-4">CATEGORÍAS</h2>
+    <!-- VISIÓN -->
+    <section id="vision" class="vision">
+        <div class="container">
+            <div class="content-card">
+                <div class="icon-container">
+                    <ion-icon name="telescope" class="section-icon"></ion-icon>
                 </div>
-                <!-- Placeholder for products -->
-                <div class="col-12">
-                    <div class="row" id="product-list">
-                        <!-- Add your products dynamically or statically here -->
-                        <div class="col-md-4">
-                            <a target="_blank" href="/Jugueteria_Aplis/Juguetes.php" class="cat btn">Pescados</a>
+                <h2>🔭 Nuestra Visión</h2>
+                <p>
+                    Ser la pescadería líder en la región, reconocida por nuestra excelencia 
+                    en calidad, innovación en servicios y compromiso con la sostenibilidad marina. 
+                    Aspiramos a expandir nuestro alcance manteniendo los valores familiares 
+                    que nos fundaron, contribuyendo al desarrollo de la industria pesquera 
+                    local y siendo un referente en la comercialización responsable de productos del mar.
+                </p>
+                <div class="vision-goals">
+                    <div class="goal">
+                        <div class="goal-icon">
+                            <ion-icon name="trending-up"></ion-icon>
                         </div>
-                        <div class="col-md-4">
-                            <a target="_blank" href="./fiesta.php" class="cat btn">Crustaceos</a>
+                        <h4>Crecimiento Sostenible</h4>
+                        <p>Expandir responsablemente preservando la calidad que nos distingue y manteniendo nuestros valores familiares</p>
+                    </div>
+                    <div class="goal">
+                        <div class="goal-icon">
+                            <ion-icon name="shield-checkmark"></ion-icon>
                         </div>
-                        <div class="col-md-4">
-                            <a target="_blank" href="./confiteria.php" class="cat btn">Moluscos</a>
+                        <h4>Compromiso Ambiental</h4>
+                        <p>Liderar en prácticas ecológicas marinas, siendo pioneros en la conservación de nuestros ecosistemas</p>
+                    </div>
+                    <div class="goal">
+                        <div class="goal-icon">
+                            <ion-icon name="handshake"></ion-icon>
                         </div>
+                        <h4>Fortalecimiento Comunitario</h4>
+                        <p>Impulsar la economía pesquera local creando oportunidades para nuestras comunidades costeras</p>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
+    </section>
+
+    <!-- VALORES -->
+    <section class="valores">
+        <div class="container">
+            <h2>🌟 Nuestros Valores</h2>
+            <div class="valores-grid">
+                <div class="valor-card">
+                    <ion-icon name="heart"></ion-icon>
+                    <h3>Pasión</h3>
+                    <p>Amor genuino por lo que hacemos y por servir a nuestros clientes</p>
+                </div>
+                <div class="valor-card">
+                    <ion-icon name="shield-checkmark"></ion-icon>
+                    <h3>Calidad</h3>
+                    <p>Compromiso inquebrantable con la excelencia en cada producto</p>
+                </div>
+                <div class="valor-card">
+                    <ion-icon name="handshake"></ion-icon>
+                    <h3>Confianza</h3>
+                    <p>Relaciones duraderas basadas en honestidad y transparencia</p>
+                </div>
+                <div class="valor-card">
+                    <ion-icon name="earth"></ion-icon>
+                    <h3>Sostenibilidad</h3>
+                    <p>Respeto y cuidado por nuestros océanos y recursos marinos</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!-- Footer -->
     <footer class="footer mt-5">
@@ -181,84 +249,56 @@
         </div>
     </footer>
 
-    <script type="module" src="./public/js/cargarImagen.js"></script>
+    <script type="module" src="../public/js/cargarImagen.js"></script>
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
     <!-- Custom JS -->
-    <script src="public/js/index.js"></script>
-    <script src="public/js/app.js"></script>
+    <script src="../public/js/index.js"></script>
+    <script src="../public/js/app.js"></script>
+
+    <script>
+        // Funciones para los modales (redirigir al index)
+        function abrirModalRegistro() {
+            window.location.href = '../index.html';
+            // Después de cargar, abrir el modal de registro
+            setTimeout(() => {
+                const modalRegistro = document.getElementById('modalRegistro');
+                if (modalRegistro) modalRegistro.showModal();
+            }, 100);
+        }
+
+        function abrirModal(tipo) {
+            // Redirigir al index donde están los modales
+            window.location.href = '../index.html#modal-' + tipo.toLowerCase();
+        }
+
+        // Smooth scrolling para navegación
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Animación al scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -100px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.content-card, .valor-card, .intro-card').forEach(card => {
+            observer.observe(card);
+        });
+    </script>
 </body>
-
 </html>
-    <!-- Modal de Login -->
-    <div id="login-modal" class="modal">
-        <div class="modal-content">
-            <button class="close-modal" id="close-login-modal" style="font-weight: bold;">&times;</button>
-            <!-- Botón de cierre -->
-            <center><img src="./public/img/Logo.png" alt="Logo" class="logo" width="200px"></center>
-            <hr>
-            <h3>Iniciar Sesión</h3>
-            <hr>
-            <br>
-            <form id="login-form">
-                <label for="login-usuario">Nombre de Usuario:</label>
-                <input type="text" id="login-usuario" placeholder="Tu nombre de usuario" required style="width: 300px;">
-
-                <label for="login-password">Contraseña:</label>
-                <input type="password" id="login-password" placeholder="Tu contraseña" required style="width: 300px;">
-
-                <button type="submit" id="login-btn">Ingresar</button>
-                <center>
-                    <p id="register-link">¿No tienes cuenta? <a href="#" id="show-register">Regístrate</a></p>
-                </center>
-            </form>
-        </div>
-    </div>
-
-    <!-- Modal de Registro -->
-    <div id="register-modal" class="modal">
-        <div class="modal-content">
-            <button class="close-modal" id="close-register-modal" style="font-weight: bold;">&times;</button>
-            <!-- Botón de cierre -->
-            <center><img src="./public/img/Logo.png" alt="Logo" class="logo" width="200px"></center>
-            <hr>
-
-            <h3>Registro de Clientes</h3>
-            <hr>
-            <br>
-            <form id="register-form">
-                <label for="register-nombre">Nombre Completo:</label>
-                <input type="text" id="register-nombre" placeholder="Tu nombre completo" required style="width: 300px;">
-
-                <label for="register-usuario">Nombre de Usuario:</label>
-                <input type="text" id="register-usuario" placeholder="Tu nombre de usuario" required style="width: 300px;">
-
-                <label for="register-password">Contraseña:</label>
-                <input type="password" id="register-password" placeholder="Tu contraseña" required style="width: 300px;">
-
-                <button type="submit" id="register-btn">Registrarse</button>
-            </form>
-        </div>
-    </div>
-
-
-    <!-- Modal de Login para Administrador (eliminar ya no funciona en el nuevo inicio de sesion)-->
-    <div id="admin-login-modal" class="modal">
-        <div class="modal-content">
-            <button class="close-modal" id="close-admin-modal">&times;</button>
-            <center><img src="./public/img/Logo.png" alt="Logo" class="logo" width="200px"></center>
-            <hr>
-            <h3>Acceso Administrador</h3>
-            <hr>
-            <br>
-            <form id="admin-login-form">
-                <label for="admin-usuario">Usuario Administrador:</label>
-                <input type="text" id="admin-usuario" placeholder="Usuario" required style="width: 300px;">
-
-                <label for="admin-password">Contraseña:</label>
-                <input type="password" id="admin-password" placeholder="Contraseña" required style="width: 300px;">
-
-                <button type="submit" id="admin-login-btn">Ingresar</button>
-            </form>
-        </div>
-    </div>
