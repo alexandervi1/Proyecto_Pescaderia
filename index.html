@@ -11,10 +11,14 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Custom CSS -->
     <link href="public/css/style.css" rel="stylesheet">
+    <!-- Modal CSS -->
+    <link href="public/css/modals.css" rel="stylesheet">
 
 </head>
 
 <body>
+
+
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg">
         <div class="container">
@@ -29,7 +33,7 @@
                 id="search-form": Identificador único para manejarlo en JavaScript. 
                 -->
                 <!-- campo de búsqueda -->
-                <input class="form-control me-2" type="search" id="search-input">      
+                <input class="form-control me-2" type="search" id="search-input">
                 <!--form-control: Estiliza el input con Bootstrap.
                 me-2: Margen derecho de 2 unidades para separar del botón. 
                 El usuario ingresa un término en el campo de búsqueda (#search-input).
@@ -38,8 +42,8 @@
                  placeholder="Filtrar" Muestra un texto de ayuda antes de que el usuario escriba. 
                  id="search-input": Permite referenciar el input en scripts.
                  
-                 --> 
-                <button class="btn btn-outline-light" type="submit">   
+                 -->
+                <button class="btn btn-outline-light" type="submit">
                     <!-- Hace que el botón envíe el formulario. -->
                     <i class="bi bi-search"></i>
                 </button>
@@ -49,11 +53,13 @@
 
             <!-- Opciones antes de iniciar sesión -->
             <div id="guest-options">
-        
-                <a href="controller/controller.php?opc=1" id="btn-quienes" class="btn btn-link text-light" style=" color: white;">¿Quiénes somos?</a>
+
+                <a href="controller/controller.php?opc=1" id="btn-quienes" class="btn btn-link text-light"
+                    style=" color: white;">¿Quiénes somos?</a>
                 <button class="btn btn-danger" id="open-login-modal">Iniciar Sesión</button>
-                <a href="#" class="btn btn-primary" id="open-register-modal">Registrarse</a>
-                <a href="./controller/usercontrolador.php?accion=ayuda" id="btn-ayuda" class="btn btn-link text-light" style="color: white;">
+                <button class="btn btn-primary" id="open-register-modal">Registrarse</button>
+                <a href="./controller/usercontrolador.php?accion=ayuda" id="btn-ayuda" class="btn btn-link text-light"
+                    style="color: white;">
                     <i class="bi bi-question-circle"></i> Ayuda
                 </a>
                 <!--<a href="#" class="btn btn-link text-light" id="open-admin-modal">Administrador</a>-->
@@ -141,7 +147,7 @@
             </div>
         </div>
 
-  
+
 
         <!--CATEGORÍAS-->
         <div class="container mt-4">
@@ -187,78 +193,87 @@
     <!-- Custom JS -->
     <script src="public/js/index.js"></script>
     <script src="public/js/app.js"></script>
+    <script src="public/js/modals.js"></script>
 </body>
 
 </html>
-    <!-- Modal de Login -->
-    <div id="login-modal" class="modal">
-        <div class="modal-content">
-            <button class="close-modal" id="close-login-modal" style="font-weight: bold;">&times;</button>
-            <!-- Botón de cierre -->
-            <center><img src="./public/img/Logo.png" alt="Logo" class="logo" width="200px"></center>
-            <hr>
-            <h3>Iniciar Sesión</h3>
-            <hr>
-            <br>
-            <form id="login-form">
-                <label for="login-usuario">Nombre de Usuario:</label>
-                <input type="text" id="login-usuario" placeholder="Tu nombre de usuario" required style="width: 300px;">
+<!-- Modal de Login -->
+<div id="login-modal" class="modal">
+    <div class="modal-content">
+        <button class="close-modal" id="close-login-modal" style="font-weight: bold;">&times;</button>
+        <!-- Botón de cierre -->
+        <center><img src="./public/img/Pescaderia Don Walter logo.png" alt="Logo" class="logo" width="200px"></center>
+        <hr>
+        <h3>Iniciar Sesión</h3>
+        <hr>
+        <br>
+        <form id="login-form">
+            <label for="login-email">Correo Electrónico:</label>
+            <input type="email" id="login-email" placeholder="Tu correo electrónico" required>
 
-                <label for="login-password">Contraseña:</label>
-                <input type="password" id="login-password" placeholder="Tu contraseña" required style="width: 300px;">
+            <label for="login-password">Contraseña:</label>
+            <input type="password" id="login-password" placeholder="Tu contraseña" required>
 
-                <button type="submit" id="login-btn">Ingresar</button>
-                <center>
-                    <p id="register-link">¿No tienes cuenta? <a href="#" id="show-register">Regístrate</a></p>
-                </center>
-            </form>
-        </div>
+            <button type="submit" id="login-btn">Ingresar</button>
+            <center>
+                <p id="register-link">¿No tienes cuenta? <a href="#" id="show-register">Regístrate</a></p>
+            </center>
+        </form>
     </div>
+</div>
 
-    <!-- Modal de Registro -->
-    <div id="register-modal" class="modal">
-        <div class="modal-content">
-            <button class="close-modal" id="close-register-modal" style="font-weight: bold;">&times;</button>
-            <!-- Botón de cierre -->
-            <center><img src="./public/img/Logo.png" alt="Logo" class="logo" width="200px"></center>
-            <hr>
+<!-- Modal de Registro -->
+<div id="register-modal" class="modal">
+    <div class="modal-content">
+        <button class="close-modal" id="close-register-modal" style="font-weight: bold;">&times;</button>
+        <!-- Botón de cierre -->
+        <center><img src="./public/img/Pescaderia Don Walter logo.png" alt="Logo" class="logo" width="200px"></center>
+        <hr>
+        <h3>Registro de Clientes</h3>
+        <hr>
+        <br>
+        <form id="register-form">
+            <label for="register-nombre">Nombre:</label>
+            <input type="text" id="register-nombre" placeholder="Tu nombre" required>
 
-            <h3>Registro de Clientes</h3>
-            <hr>
-            <br>
-            <form id="register-form">
-                <label for="register-nombre">Nombre Completo:</label>
-                <input type="text" id="register-nombre" placeholder="Tu nombre completo" required style="width: 300px;">
+            <label for="register-apellido">Apellido:</label>
+            <input type="text" id="register-apellido" placeholder="Tu apellido" required>
 
-                <label for="register-usuario">Nombre de Usuario:</label>
-                <input type="text" id="register-usuario" placeholder="Tu nombre de usuario" required style="width: 300px;">
+            <label for="register-cedula">Cédula:</label>
+            <input type="text" id="register-cedula" placeholder="Tu número de cédula" required>
 
-                <label for="register-password">Contraseña:</label>
-                <input type="password" id="register-password" placeholder="Tu contraseña" required style="width: 300px;">
+            <label for="register-email">Correo Electrónico:</label>
+            <input type="email" id="register-email" placeholder="Tu correo electrónico" required>
 
-                <button type="submit" id="register-btn">Registrarse</button>
-            </form>
-        </div>
+            <label for="register-password">Contraseña:</label>
+            <input type="password" id="register-password" placeholder="Tu contraseña" required>
+
+            <label for="register-confirm-password">Confirmar Contraseña:</label>
+            <input type="password" id="register-confirm-password" placeholder="Confirma tu contraseña" required>
+
+            <button type="submit" id="register-btn">Registrarse</button>
+        </form>
     </div>
+</div>
 
 
-    <!-- Modal de Login para Administrador (eliminar ya no funciona en el nuevo inicio de sesion)-->
-    <div id="admin-login-modal" class="modal">
-        <div class="modal-content">
-            <button class="close-modal" id="close-admin-modal">&times;</button>
-            <center><img src="./public/img/Logo.png" alt="Logo" class="logo" width="200px"></center>
-            <hr>
-            <h3>Acceso Administrador</h3>
-            <hr>
-            <br>
-            <form id="admin-login-form">
-                <label for="admin-usuario">Usuario Administrador:</label>
-                <input type="text" id="admin-usuario" placeholder="Usuario" required style="width: 300px;">
+<!-- Modal de Login para Administrador (eliminar ya no funciona en el nuevo inicio de sesion)-->
+<div id="admin-login-modal" class="modal">
+    <div class="modal-content">
+        <button class="close-modal" id="close-admin-modal">&times;</button>
+        <center><img src="./public/img/Logo.png" alt="Logo" class="logo" width="200px"></center>
+        <hr>
+        <h3>Acceso Administrador</h3>
+        <hr>
+        <br>
+        <form id="admin-login-form">
+            <label for="admin-usuario">Usuario Administrador:</label>
+            <input type="text" id="admin-usuario" placeholder="Usuario" required>
 
-                <label for="admin-password">Contraseña:</label>
-                <input type="password" id="admin-password" placeholder="Contraseña" required style="width: 300px;">
+            <label for="admin-password">Contraseña:</label>
+            <input type="password" id="admin-password" placeholder="Contraseña" required>
 
-                <button type="submit" id="admin-login-btn">Ingresar</button>
-            </form>
-        </div>
+            <button type="submit" id="admin-login-btn">Ingresar</button>
+        </form>
     </div>
+</div>
