@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", function() {
     let guestOptions = document.getElementById("guest-options");
 
     // ✅ Comprobar sesión al cargar la página
-    fetch("controller/getSession.php")
+    fetch("/controller/getSession.php")
         .then(response => response.json())
         .then(data => {
             console.log("Sesión detectada:", data); // 🔍 Debugging en consola

@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
     // ✅ Comprobar sesión al cargar la página
-    fetch("controller/getSession.php")
+    fetch("/controller/getSession.php")
         .then(response => response.json())
         .then(data => {
             console.log("Sesión detectada:", data); // 🔍 Debugging en consola
@@ -76,7 +76,7 @@ document.addEventListener("DOMContentLoaded", function() {
                                 if (data.success) {
                                     //loginModal.style.opacity = "0";
                                     //loginModal.style.visibility = "hidden";
-                                    window.location.href = "controller/redirigir.php";
+                                    window.location.href = "/controller/redirigir.php";
                                 } else {
                                     alert("Usuario o contraseña incorrectos");
                                 }
@@ -91,7 +91,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // Funcion de Login de Administrador adaptado 
     function loginAdmin(usuario, password) {
-        fetch("./controller/authAdmin.php", {
+        fetch("/controller/authAdmin.php", {
                 method: "POST",
                 headers: { "Content-Type": "application/x-www-form-urlencoded" },
                 body: `usuario=${usuario}&password=${password}`
@@ -116,7 +116,7 @@ document.addEventListener("DOMContentLoaded", function() {
             let usuario = document.getElementById("admin-usuario").value;
             let password = document.getElementById("admin-password").value;
 
-            fetch("./controller/authAdmin.php", {
+            fetch("/controller/authAdmin.php", {
                     method: "POST",
                     headers: { "Content-Type": "application/x-www-form-urlencoded" },
                     body: `usuario=${usuario}&password=${password}`
@@ -144,7 +144,7 @@ document.addEventListener("DOMContentLoaded", function() {
             let usuario = document.getElementById("register-usuario").value;
             let password = document.getElementById("register-password").value;
 
-            fetch("model/register.php", {
+            fetch("Model/register.php", {
                     method: "POST",
                     headers: { "Content-Type": "application/x-www-form-urlencoded" },
                     body: `nombreCompleto=${nombreCompleto}&usuario=${usuario}&password=${password}`
@@ -165,14 +165,15 @@ document.addEventListener("DOMContentLoaded", function() {
     // ✅ Acción para "¿Quiénes Somos?"
     if (btnQuienes) {
         btnQuienes.addEventListener("click", function() {
-            window.location.href = "./controller/usercontrolador.php?accion=quienes_somos";
+            window.location.href = "/controller/usercontrolador.php?accion=QuienesSomos";
         });
     }
 
     // ✅ Acción para "Iniciar Sesión"
     if (btnLogin) {
+        alert ("llegue al btn login");
         btnLogin.addEventListener("click", function() {
-            fetch("./controller/usercontrolador.php?accion=login")
+            fetch("/controller/ControladorLogueo.php?accion=login")
                 .then(response => response.json())
                 .then(data => {
                     if (data.modal === "login") {
